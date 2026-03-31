@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Community - San Andreas Collective</title>
+<link rel="icon" type="image/png" href="aae.png">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #e5e5e5;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #e5e5e5;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+/* HEADER */
+header {
+    background: #1a1a1a;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+/* SECTION */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* TEXT */
+.description {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px; /* controls size */
+    height: auto; /*  natural ratio */
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="community.html">COMMUNITY</a>
+    <a href="departments.html">DEPARTMENTS</a>
+</nav>
+
+<header>
+    <h1>COMMUNITY</h1>
+</header>
+
+<div class="section">
+    <div class="description">
+        <p>
+            Welcome to the San Andreas Collective community hub — a place where players share their most 
+            memorable moments, stories, and experiences from across the city.
+        </p>
+
+        <p>
+            From intense police operations to casual hangouts and wild RP adventures, everything comes to life here. 
+            Connect, explore, and be part of the story that makes San Andreas unforgettable.
+        </p>
+    </div>
+
+    <div class="gallery">
+        <img src="Trav_3.png" onclick="openImg(this.src)">
+        <img src="image512`1.png" onclick="openImg(this.src)">
+        <img src="imageaa.png" onclick="openImg(this.src)">
+        <img src="image214.png" onclick="openImg(this.src)">
+        <img src="image566.png" onclick="openImg(this.src)">
+        <img src="image777.png" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
+</div>
+
+<footer>
+    © 2026 San Andreas Collective
+</footer>
+
+<script>
+function openImg(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImg() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
